@@ -2,23 +2,28 @@
 <launch>
 	<arg name="camera" default="cam3d"/>
 	<arg name="depth" default="depth_registered"/>
-	<arg name="rviz_view" default="true"/>
+
+	<!-- Parameter condition for rviz -->
+	<arg name="show_rviz" default="true"/>
    
     <!-- start drivers -->
     <!-- <include file="$(find mdr_bringup_sim)/robots/$(arg robot).launch"> 
        <arg name="robot" value="$(arg robot)"/>
     </include>-->
-    <group if="$(arg rviz_view)">
-	<node name="rviz" pkg="rviz" type="rviz" />
-    </group>
 
     <!-- run pointcloud_to_laserscan node -->
+    <group if="$(arg show_rviz)">
+       <node name="rviz" pkg="rviz" type="rviz"/>
+     </group>
+
+    <!-- rviz / default config -->
     <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" >
       <param name="scan_height" value=	"10"/>
       <param name="output_frame_id" value="base_link"/>
       <param name="range_min" value="0.45"/>
       <remap from="image" to="cam3d/depth_registered/image_raw"/>
     </node>
+
 	
 </launch>
 
