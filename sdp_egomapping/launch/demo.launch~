@@ -12,9 +12,9 @@
     </include>-->
 
     <!-- run pointcloud_to_laserscan node -->
-    <group if="$(arg show_rviz)">
-       <node name="rviz" pkg="rviz" type="rviz"/>
-     </group>
+	 <group if="$(arg show_rviz)">
+	   <node name="rviz" pkg="rviz" type="rviz"/>
+	 </group>
 
     <!-- rviz / default config -->
     <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" >
