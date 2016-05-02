@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package>
   <name>sdp_egomapping</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description> sdp_egommapping includes the necessary packages to map an egocentric map
 	</description>
 
   <maintainer email="jose.mayoral@smail.inf.h-brs.de">Jose Carlos Mayoral</maintainer>
   <maintainer email="chaitanya.hebbal@smail.inf.h-brs.de">Chaitanya Hebbal</maintainer>
-  <maintainer email="octavio.arriaga@smail.inf.h-brs.de ">Luis Octavio Arriaga Camargo</maintainer>
+  <maintainer email="octavio.arriaga@smail.inf.h-brs.de">Luis Octavio Arriaga Camargo</maintainer>
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
@@ -41,7 +41,7 @@
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend>depthimage_to_laserscan</buildtool_depend>
   <buildtool_depend>cob_scan_unifier</buildtool_depend>
-
+  <buildtool_depend>slam_gmapping</buildtool_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

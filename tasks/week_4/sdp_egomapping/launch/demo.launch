@@ -26,6 +26,12 @@
       <remap from="image" to="cam3d/depth_registered/image_raw"/>
     </node>
 
+
+	<node pkg="gmapping" type="slam_gmapping" 	   name="slam_gmapping" output="screen">
+      <remap from="scan" to="scan_unified"/>
+      <param name="_odom_frame" value="odom_combined"/>
+    </node>
+
 </launch>
 
 
