@@ -25,7 +25,13 @@
       <param name="range_min" value="0.3"/>
       <remap from="image" to="cam3d/depth_registered/image_raw"/>
     </node>
-
+<!--
+ <node name="cob_scan_unifier" type="cob_scan_unifier"      pkg="cob_scan_unifier">
+     <rosparam>
+	input_scans: base_laser_front/scan, base_laser_rear/scan,/scan
+     </rosparam>
+   </node>
+-->
 </launch>
 
 
