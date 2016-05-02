@@ -7,6 +7,7 @@
 
   <maintainer email="jose.mayoral@smail.inf.h-brs.de">Jose Carlos Mayoral</maintainer>
   <maintainer email="chaitanya.hebbal@smail.inf.h-brs.de">Chaitanya Hebbal</maintainer>
+  <maintainer email="octavio.arriaga@smail.inf.h-brs.de ">Luis Octavio Arriaga Camargo</maintainer>
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
@@ -39,6 +40,7 @@
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend>depthimage_to_laserscan</buildtool_depend>
+  <buildtool_depend>cob_scan_unifier</buildtool_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
