@@ -13,12 +13,12 @@
        <arg name="robot" value="$(arg robot)"/>
     </include>-->
 
-    <!-- run pointcloud_to_laserscan node -->
+    <!-- rviz / default config -->    
     <group if="$(arg show_rviz)">
-       <node name="rviz" pkg="rviz" type="rviz"/>
+       <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sdp_egomapping)/rviz/sdp.rviz"/>
      </group>
 
-    <!-- rviz / default config -->
+	<!-- run pointcloud_to_laserscan node -->
     <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan" >
       <param name="scan_height" value=	"10"/>
       <param name="output_frame_id" value="base_link"/>
@@ -29,7 +29,7 @@
 
 	<node pkg="gmapping" type="slam_gmapping" 	   name="slam_gmapping" output="screen">
       <remap from="scan" to="scan_unified"/>
-      <param name="_odom_frame" value="odom_combined"/>
+      <param name="odom_frame" value="odom_combined"/>
     </node>
 
 </launch>
